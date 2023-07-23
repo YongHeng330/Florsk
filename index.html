@@ -2,7 +2,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        var data = $.getJSON("./data.json").responseJSON
+        var data = $.getJSON("./data.json")
         const paramsStr = window.location.search
         const params = new URLSearchParams(paramsStr)
         var mob = params.get('mob')
