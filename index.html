@@ -2,23 +2,31 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        const paramsStr = window.location.search
-        const params = new URLSearchParams(paramsStr)
-        var mob = params.get('mob')
-        var diedBy = params.get('killer')
-        var server = params.get('server')
-        console.log(mob)
-        console.log(diedBy)
-        console.log(server)
+        function sortByTime(json){
+          let sort1 = json.spawn.sort((a,b) => -(a.time-b.time));
+          return sort1;
+        }
+        const paramsStr = window.location.search;
+        const params = new URLSearchParams(paramsStr);
+        var mob = params.get('mob');
+        var diedBy = params.get('killer');
+        var server = params.get('server');
+        console.log(mob);
+        console.log(diedBy);
+        console.log(server);
         $.getJSON("./data.json",function(result){
           if(!(mob || diedBy || server)){
-            $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>")
-            $("div").append("</br><h3>这里收集了Florr中各种Super怪的刷新时间</h3>")
-            $("div").append("</br><h3>用于数据统计以及观察刷S</h3>")
-            $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>")
-            $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>")
+            $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>");
+            $("div").append("</br><h3>这里收集了Florr中各种Super怪的刷新时间</h3>");
+            $("div").append("</br><h3>用于数据统计以及观察刷S</h3>");
+            $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>");
+            $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
+            let sorted = sortByTime(result);
+            $.each(sorted, () => {
+              $("div").append(`</br><h3>${this.diedBy}</h3>`);
+            });
           }
-        })
+        });
     </script>
     <style type="text/css">
       @font-face{
@@ -30,7 +38,7 @@
         font-family: "Ub";
         color: #FFFFFF;
         -webkit-text-stroke:1px #000000;
-        line-height:50%
+        line-height:50%;
       }
       body{
         background-image:url('./Snipaste_2023-07-23_21-59-19.png');
