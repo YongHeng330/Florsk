@@ -2,13 +2,16 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        var data = $.getJSON("./data.json")
+        var json = null
+        $.getJSON("./data.json",function(data){
+          json = data
+        })
         const paramsStr = window.location.search
         const params = new URLSearchParams(paramsStr)
         var mob = params.get('mob')
         var diedBy = params.get('killer')
         var server = params.get('server')
-        console.log(data)
+        console.log(json)
         console.log(mob)
         console.log(diedBy)
         console.log(server)
