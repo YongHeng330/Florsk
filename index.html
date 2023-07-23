@@ -3,7 +3,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
         function sortByTime(json){
-          let sort1 = json.spawn.sort((a,b) => -(a.time-b.time));
+          let sort1 = json.sort((a,b) => -(a.time-b.time));
           return sort1;
         }
         const paramsStr = window.location.search;
@@ -21,7 +21,7 @@
             $("div").append("</br><h3>用于数据统计以及观察刷S</h3>");
             $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>");
             $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
-            let sorted = sortByTime(result);
+            let sorted = sortByTime(result.spawn);
             $.each(sorted, () => {
               $("div").append(`</br><h3>${this.diedBy}</h3>`);
             });
