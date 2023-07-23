@@ -2,17 +2,14 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        window.json = "获取失败"
-        function returnJSON(data,textStatus,jqXHR){
-          window.json = data
-        }
-        $.getJSON("./data.json","",returnJSON)
+        $.getJSON("./data.json",function(result){
+          console.log(result)
+        })
         const paramsStr = window.location.search
         const params = new URLSearchParams(paramsStr)
         var mob = params.get('mob')
         var diedBy = params.get('killer')
         var server = params.get('server')
-        console.log(window.json)
         console.log(mob)
         console.log(diedBy)
         console.log(server)
@@ -20,5 +17,7 @@
   </head>
   <body>
     稍安勿燥，，本网站正在开发
+    <div class="div">
+    </div>
   </body>
 </html>
