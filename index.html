@@ -1,28 +1,6 @@
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script>
-        const paramsStr = window.location.search;
-        const params = new URLSearchParams(paramsStr);
-        var mob = params.get('mob');
-        var diedBy = params.get('killer');
-        var server = params.get('server');
-        console.log(mob);
-        console.log(diedBy);
-        console.log(server);
-        if(!(mob || diedBy || server)){
-            $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>");
-            $("div").append("</br><h3>这里收集了Florr中各种Super怪的刷新时间</h3>");
-            $("div").append("</br><h3>用于数据统计以及观察刷S</h3>");
-            $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>");
-            $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
-          }
-        $.getJSON("./data.json",function(result){
-            result.spawn.forEach((i) =>{
-              $("div").append(`</br><h3>${i.diedBy}</h3>`);
-            })
-        });
-    </script>
     <style type="text/css">
       @font-face{
         font-family: "Ub";
@@ -41,6 +19,28 @@
     </style>
   </head>
   <body>
+    <script>
+        const paramsStr = window.location.search;
+        const params = new URLSearchParams(paramsStr);
+        var mob = params.get('mob');
+        var diedBy = params.get('killer');
+        var server = params.get('server');
+        console.log(mob);
+        console.log(diedBy);
+        console.log(server);
+        if(!(mob || diedBy || server)){
+            $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>");
+            $("div").append("</br><h3>这里收集了Florr中各种Super怪的刷新时间</h3>");
+            $("div").append("</br><h3>用于数据统计以及观察刷S</h3>");
+            $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>");
+            $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
+        }
+        $.getJSON("./data.json",function(result){
+            result.spawn.forEach((i) =>{
+              $("div").append(`</br><h3>${i.diedBy}</h3>`);
+            })
+        });
+    </script>
     <div class="div">
       <br>
     </div>
