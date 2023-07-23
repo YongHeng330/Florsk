@@ -2,10 +2,11 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        var json = null
-        $.getJSON("./data.json","",function(data){
+        var json = "获取失败"
+        function returnJSON(data,textStatus,jqXHR){
           json = data
-        })
+        }
+        $.getJSON("./data.json","",returnJSON)
         const paramsStr = window.location.search
         const params = new URLSearchParams(paramsStr)
         var mob = params.get('mob')
