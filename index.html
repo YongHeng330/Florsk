@@ -13,13 +13,16 @@
         $.getJSON("./data.json",function(result){
           if(!(mob || diedBy || server)){
             $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>")
-            $("div").append("这里显示了")
+            $("div").append("这里收集了Florr中各种Super怪的刷新时间")
+            $("div").append("用于数据统计以及观察刷S")
+            $("div").append("数据来源主要是Q群以及Florr中")
+            $("div").append("以下为最近刷新的Super怪")
           }
         })
     </script>
     <style type="text/css">
-      .div{
-        margin:0 auto;
+      div{
+        text-align: center;
       }
     </style>
   </head>
