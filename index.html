@@ -12,10 +12,16 @@
         console.log(server)
         $.getJSON("./data.json",function(result){
           if(!(mob || diedBy || server)){
-            $("div").append("欢迎来到FrSuperSpawn!")
+            $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>")
+            $("div").append("这里显示了")
           }
         })
     </script>
+    <style type="text/css">
+      .div{
+        margin:0 auto;
+      }
+    </style>
   </head>
   <body>
     <div class="div">
