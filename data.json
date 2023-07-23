@@ -1,9 +1,10 @@
 {
   "spawn":[
-    {"mob":"Fly","time":07232028,"diedBy":"4EV3R9","server":"US"},
-    {"mob":"Roach","time":07232136,"diedBy":"tarou9n","server":"US"},
-    {"mob":"Hel Beetle","time":07232234,"diedBy":"SWEDEN1","server":"EU"},
-    {"mob":"Queen Fire Ant","time":07232248,"diedBy":"UNKNOWN","server":"AS"}]
+    {"mob":"Queen Fire Ant","time":"7/23 22:48","diedBy":"UNKNOWN","server":"AS"},
+    {"mob":"Hel Beetle","time":"7/23 22:34","diedBy":"SWEDEN1","server":"EU"},
+    {"mob":"Roach","time":"7/23 21:36","diedBy":"tarou9n","server":"US"},
+    {"mob":"Fly","time":"7/23 20:28","diedBy":"4EV3R9","server":"US"},
+  ]
 }
 
 
