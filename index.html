@@ -18,9 +18,9 @@
             $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
           }
         $.getJSON("./data.json",function(result){
-            $.each(result.spawn, () => {
-              $("div").append(`</br><h3>${this.diedBy}</h3>`);
-            });
+            result.spawn.forEach((i) =>{
+              $("div").append(`</br><h3>${i.diedBy}</h3>`);
+            })
         });
     </script>
     <style type="text/css">
