@@ -2,10 +2,6 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        function sortByTime(json){
-          let sort1 = json.sort((a,b) => -(a.time-b.time));
-          return sort1;
-        }
         const paramsStr = window.location.search;
         const params = new URLSearchParams(paramsStr);
         var mob = params.get('mob');
@@ -22,8 +18,7 @@
             $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
           }
         $.getJSON("./data.json",function(result){
-            let sorted = sortByTime(result.spawn);
-            $.each(sorted, () => {
+            $.each(result.spawn, () => {
               $("div").append(`</br><h3>${this.diedBy}</h3>`);
             });
         });
