@@ -2,9 +2,9 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        var json = "获取失败"
+        windows.json = "获取失败"
         function returnJSON(data,textStatus,jqXHR){
-          json = data
+          windows.json = data
         }
         $.getJSON("./data.json","",returnJSON)
         const paramsStr = window.location.search
@@ -12,7 +12,7 @@
         var mob = params.get('mob')
         var diedBy = params.get('killer')
         var server = params.get('server')
-        console.log(json)
+        console.log(windows.json)
         console.log(mob)
         console.log(diedBy)
         console.log(server)
