@@ -1,5 +1,6 @@
 {
   "spawn":[
+    {"mob":"Rock","time":"7/24 1:36","diedBy":"UNKNOWN","server":"EU"},
     {"mob":"Hel Beetle","time":"7/23 23:11","diedBy":"bluu","server":"EU"},
     {"mob":"Leech","time":"7/23 23:05","diedBy":"Missile","server":"US"},
     {"mob":"Fly","time":"7/23 23:04","diedBy":"Mario","server":"AS"},
