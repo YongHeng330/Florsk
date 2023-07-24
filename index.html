@@ -17,8 +17,6 @@
         background-image:url('./Snipaste_2023-07-23_21-59-19.png');
       }
     </style>
-  </head>
-  <body>
     <script>
         const paramsStr = window.location.search;
         const params = new URLSearchParams(paramsStr);
@@ -35,6 +33,10 @@
             $("div").append("</br><h3>数据来源主要是Q群以及Florr中</h3>");
             $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
         }
+    </script>
+  </head>
+  <body>
+    <script>
         $.getJSON("./data.json",function(result){
             result.spawn.forEach((i) =>{
               $("div").append(`</br><h3>${i.diedBy}</h3>`);
