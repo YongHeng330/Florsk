@@ -1,5 +1,6 @@
 {
   "spawn":[
+    {"mob":"Hornet","time":"7/24 17:51","diedBy":"Mario","server":"EU"},
     {"mob":"Starfish","time":"7/24 17:22","diedBy":"Etin","server":"AS"},
     {"mob":"Fly","time":"7/24 16:43","diedBy":"UNKNOWN","server":"US"},
     {"mob":"Beetle","time":"7/24 16:28","diedBy":"monkeyfriends","server":"US"},
