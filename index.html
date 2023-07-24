@@ -42,8 +42,8 @@
         $.getJSON("./data.json",function(result){
             if(!(mob || diedBy || server)){
                 $("div").append("<h1>FrSuperSpawn</h1>");
-                $("div").append("</br><h3>以下为最近刷新5次的SuperMob</h3>");
-                result.spawn.slice(0,5).forEach((i) =>{
+                $("div").append("</br><h3>以下为最近刷新15次的SuperMob</h3>");
+                result.spawn.slice(0,15).forEach((i) =>{
                   $("div").append(`</br><h3>${dataToString(i)}</h3>`);
                 })
                 $("div").append("</br><h3>正在制作使用服务器，生物以及击杀者查询甚至是击杀Super排行榜请耐心等待</h3>");
