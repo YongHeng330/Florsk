@@ -21,7 +21,7 @@
   <body>
     <script>
         function dataToString(data){
-          return `${data.time}    [${data.server}]${data.mob} killed by ${data.killer}`
+          return `${data.time}    [${data.server}]${data.mob} killed by ${data.diedBy}`
         }
         const paramsStr = window.location.search;
         const params = new URLSearchParams(paramsStr);
