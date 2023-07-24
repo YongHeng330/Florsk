@@ -23,7 +23,13 @@
   <body>
     <script>
         function dataToString(data){
-          return `${data.time}    [${data.server}]${data.mob} killed by ${data.diedBy}`
+          if(data.diedBy == "NO DIED"){
+            return `${data.time}    [${data.server}]${data.mob} is alive`
+          }else if(data.diedBy == "UNKNOWN"){
+            return `${data.time}    [${data.server}]${data.mob}`
+          }else{
+            return `${data.time}    [${data.server}]${data.mob} killed by ${data.diedBy}`
+          }
         }
         const paramsStr = window.location.search;
         const params = new URLSearchParams(paramsStr);
