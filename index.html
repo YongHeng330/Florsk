@@ -37,10 +37,11 @@
             if(!(mob || diedBy || server)){
                 $("div").append("<h1>欢迎来到FrSuperSpawn!</h1>");
                 $("div").append("</br><h3>这里收集了Florr中各种Super怪的刷新时间</h3>");
-                $("div").append("</br></br></br><h3>以下为最近刷新的Super怪</h3>");
+                $("div").append("</br></br></br><h3>以下为最近刷新5次的SuperMob</h3>");
                 result.spawn.slice(0,5).forEach((i) =>{
                   $("div").append(`</br><h3>${dataToString(i)}</h3>`);
                 })
+                $("div").append("</br><h3>正在制作使用服务器，生物以及击杀者查询甚至是击杀Super排行榜请耐心等待</h3>");
             }
         });
       
