@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="icon" href="./favicon.ico" sizes="16x16">
+    <title>Florsk</title>
+    <style type="text/css">
+      @font-face{
+        font-family: "Ub";
+        src: url("./Ubuntu-B.ttf");
+      }
+      div{
+        text-align: center;
+        font-family: "Ub";
+        color: #FFFFFF;
+        -webkit-text-stroke:1px #000000;
+        line-height:50%;
+      }
+      body{
+        background-image:url('./Snipaste_2023-07-23_21-59-19.png');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <br>
+      <h1>Ask 1</h1>
+      <br><h2>yggdrasil <-> ____</h2>
+    </div>
+  </body>
+</html>
