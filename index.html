@@ -2,7 +2,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="icon" href="./favicon.ico" sizes="16x16">
-    <title>FrSuperSpawn</title>
+    <title>Florsk</title>
     <style type="text/css">
       @font-face{
         font-family: "Ub";
@@ -21,36 +21,6 @@
     </style>
   </head>
   <body>
-    <script>
-        function dataToString(data){
-          if(data.diedBy == "NO DIED"){
-            return `${data.time}    [${data.server}]${data.mob} is alive`
-          }else if(data.diedBy == "UNKNOWN"){
-            return `${data.time}    [${data.server}]${data.mob}`
-          }else{
-            return `${data.time}    [${data.server}]${data.mob} killed by ${data.diedBy}`
-          }
-        }
-        const paramsStr = window.location.search;
-        const params = new URLSearchParams(paramsStr);
-        var mob = params.get('mob');
-        var diedBy = params.get('killer');
-        var server = params.get('server');
-        console.log(mob);
-        console.log(diedBy);
-        console.log(server);
-        $.getJSON("./data.json",function(result){
-            if(!(mob || diedBy || server)){
-                $("div").append("<h1>FrSuperSpawn</h1>");
-                $("div").append("</br><h3>以下为最近刷新15次的SuperMob</h3>");
-                result.spawn.slice(0,15).forEach((i) =>{
-                  $("div").append(`</br><h3>${dataToString(i)}</h3>`);
-                })
-                $("div").append("</br><h3>正在制作使用服务器，生物以及击杀者查询甚至是击杀Super排行榜请耐心等待</h3>");
-            }
-        });
-      
-    </script>
     <div class="div">
       <br>
     </div>
